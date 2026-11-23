@@ -1,20 +1,29 @@
 # SQL Data Preparation and Validation
 
-This directory contains SQL statements recovered from the original SQLite project used in the Rogers Wireless vs. CRTC case study.
+This directory documents the SQLite workflow used in the Rogers Wireless vs. CRTC Data Analytics case study.
 
-## Files
+## SQL Files
 
-- `CRTC_Quarterly_KPIs.sql` — Defines the quarterly KPI table structure.
-- `CRTC_KPI_Standardization.sql` — Creates a standardized KPI view with consistent revenue and subscriber units.
-- `CRTC_Data_Validation.sql` — Checks numerical consistency between original and standardized KPI records.
+1. `CRTC_Quarterly_KPIs.sql` — Defines the quarterly KPI table structure.
+2. `CRTC_KPI_Aggregation_Recovered.sql` — Contains the recovered KPI aggregation logic used to calculate quarterly wireless revenue, subscribers, and ARPU.
+3. `CRTC_KPI_Standardization.sql` — Creates a standardized KPI view with revenue in CAD millions and subscribers in thousands.
+4. `CRTC_Data_Validation.sql` — Compares original and standardized KPI values after unit conversion.
+
+## Workflow
+
+Cleaned CRTC Mobile Data → Quarterly KPI Aggregation → Unit Standardization → Data Validation → Python Analysis
 
 ## Validation Results
 
-- Matched quarters: **21**
-- Quarters with numerical mismatches: **0**
+- Quarterly records checked: **21**
+- Numerical mismatches: **0**
 
-The validation query checks matching records and does not independently verify completeness of the quarterly dataset.
+The aggregation query was recovered from earlier project records and checked against the existing KPI results. The original SQLite validation query also returned 21 matching quarters and zero numerical mismatches.
 
-## Reproducibility
+## Reproducibility and Limitations
 
-The original KPI aggregation query has not been recovered. The underlying third-party datasets are not redistributed in this repository.
+The aggregation SQL was recovered from project records rather than extracted from the original SQLite query history. Its results were checked against the saved KPI table, but exact text identity with the originally executed statement cannot be independently confirmed.
+
+The SQL scripts depend on source tables in the original SQLite database. The database and underlying third-party datasets are not redistributed in this repository.
+
+The consistency validation checks matched quarterly records and does not independently establish data completeness.
