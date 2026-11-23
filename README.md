@@ -137,3 +137,25 @@ This is an independent portfolio project and is not affiliated with, sponsored b
 
 All underlying third-party information remains attributable to its respective source. Public availability does not imply unrestricted rights to redistribute or relicense third-party materials.# rogers-wireless-revenue-analytics
 Independent telecom revenue analytics case study using Excel, SQL, Python and Tableau to benchmark Rogers Wireless against Canadian industry trends.
+
+## GitHub Project Files
+
+Explore the analysis code and SQL workflow:
+
+- [Python Portfolio Notebook](notebooks/rogers-wireless-data-analytics-portfolio-showcas.ipynb)
+- [SQL Data Preparation and Validation](sql/README.md)
+- [Tableau Dashboard Files](visualizations/README.md)
+
+## Tableau Dashboard Gallery
+
+### Dashboard 1 — Rogers vs. CRTC Industry Benchmark
+
+![Rogers vs CRTC Industry Benchmark](visualizations/Dashboard%201.png)
+
+*Wireless service revenue, subscriber, and ARPU growth trends, 2022 Q1–2026 Q1.*
+
+### Dashboard 2 — 2025 Revenue Driver Analysis
+
+![Rogers 2025 Revenue Driver Analysis](visualizations/Dashboard%202.png)
+
+*Modeled subscriber and ARPU contributions alongside actual service revenue changes in 2025.*
